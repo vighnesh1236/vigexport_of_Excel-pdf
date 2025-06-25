@@ -1,0 +1,23 @@
+table {
+  border-collapse: collapse;
+  margin-top: 20px;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #333;
+  padding: 8px;
+  min-width: 100px;
+}
+
+th {
+  background: #eee;
+}
+
+td.selected, th.selected {
+  background-color: #add8e6;
+}
+
+button, input {
+  margin: 5px;
+}

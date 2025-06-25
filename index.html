@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Excel Table Editor</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+<h1>Created by Vighnesh Keerthi</h1>
+<h2>Advanced Excel Table Editor</h2>
+
+<input type="file" id="fileInput" accept=".xlsx, .xls" />
+<br><br>
+
+<!-- Control Buttons -->
+<button onclick="createEmptyTable()">Create Empty Table</button>
+<button onclick="addRow()">Add Row at End</button>
+<button onclick="addColumn()">Add Column at End</button>
+<button onclick="deleteSelectedRow()">Delete Selected Row</button>
+<button onclick="deleteSelectedColumn()">Delete Selected Column</button>
+
+<!-- Insert Position -->
+<br>
+<label>Insert at Row: <input type="number" id="rowIndex" min="0" /></label>
+<button onclick="addRowAt()">Insert Row at Index</button>
+
+<label>Insert at Column: <input type="number" id="colIndex" min="0" /></label>
+<button onclick="addColumnAt()">Insert Column at Index</button>
+<br><br>
+
+<!-- Save -->
+<button onclick="saveData()">Save Data</button>
+<button onclick="downloadExcel()">Save as Excel</button>
+<button onclick="downloadPDF()">Export as PDF</button>
+
+<!-- Table Display -->
+<div id="tableContainer"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
